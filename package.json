@@ -4,7 +4,10 @@
   "description": "Test api using mocha and chai",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "prestart": "npm install;",
+    "start": "JUNIT_REPORT_PATH=test-result/result.xml JUNIT_REPORT_STACK=1 mocha --timeout 25000 --colors --reporter mocha-jenkins-reporter || true",
+    "test": "mocha --reporter mochawesome",
+    "server": "server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,17 @@
   "bugs": {
     "url": "https://github.com/TestautoDev/ApiTestAutomation/issues"
   },
-  "homepage": "https://github.com/TestautoDev/ApiTestAutomation#readme"
+  "homepage": "https://github.com/TestautoDev/ApiTestAutomation#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "mochawesome": "3.1.1",
+    "mocha-junit-reporter": "1.18.0",
+    "mocha-multi": "1.0.1",
+    "mocha-jenkins-reporter": "^0.4.1",
+    "supertest": "^3.4.2",
+    "express": "^4.16.4",
+    "lodash": "4.3.0"
+  }
 }
