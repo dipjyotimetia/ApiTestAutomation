@@ -1,0 +1,24 @@
+{
+  "name": "apitestautomation",
+  "version": "1.0.0",
+  "description": "Test api using mocha and chai",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TestautoDev/ApiTestAutomation.git"
+  },
+  "keywords": [
+    "api",
+    "test",
+    "automation"
+  ],
+  "author": "Dipjyoti Metia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TestautoDev/ApiTestAutomation/issues"
+  },
+  "homepage": "https://github.com/TestautoDev/ApiTestAutomation#readme"
+}
