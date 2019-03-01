@@ -1,5 +1,6 @@
 const should = require('chai').should(),
     expect = require('chai').expect,
+    assert = require('chai').assert,
     supertest = require('supertest'),
     api = supertest('http://localhost:3000');
 

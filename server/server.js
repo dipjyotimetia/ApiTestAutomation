@@ -14,8 +14,8 @@ let locationList = [];
 
 app.get('/users/1', (req, res) => {
     let user = {
-        name: "Karen",
-        email: "karen@example.com",
+        name: "user",
+        email: "user@example.com",
         phoneNumber: "5556667777",
         role: "admin"
     };
