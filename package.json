@@ -7,7 +7,7 @@
     "prestart": "npm install;",
     "start": "JUNIT_REPORT_PATH=test-result/result.xml JUNIT_REPORT_STACK=1 mocha --timeout 25000 --colors --reporter mocha-jenkins-reporter || true",
     "test": "mocha --reporter mochawesome",
-    "server": "server.js"
+    "server": "server/server.js"
   },
   "repository": {
     "type": "git",
