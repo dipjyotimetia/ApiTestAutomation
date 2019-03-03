@@ -52,7 +52,7 @@ app.get('/users/2/location', (req, res) => {
     if (req.body.userId == 2) {
         res.send(locationList[0]);
     } else {
-        res.send(401);
+        res.sendStatus(401);
     }
 });
 
