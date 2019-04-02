@@ -24,7 +24,7 @@ describe('User', () => {
             })
             .expect('Content-Type', /json/)
             .expect(200)
-            .end( (err, res) => {
+            .end((err, res) => {
                 location1 = res.body;
             });
 
@@ -40,7 +40,7 @@ describe('User', () => {
             })
             .expect('Content-Type', /json/)
             .expect(200)
-            .end( (err, res) => {
+            .end((err, res) => {
                 location2 = res.body;
             });
 
@@ -130,7 +130,7 @@ describe('User', () => {
                 userId: 1
             })
             .expect(200)
-            .end( (err, res) => {
+            .end((err, res) => {
                 expect(res.body.userId).to.equal(1);
                 expect(res.body.addressCity).to.equal("Portland");
                 done();
@@ -145,7 +145,7 @@ describe('User', () => {
                 userId: 1
             })
             .expect(401)
-            .end( (err, res) => {
+            .end((err, res) => {
                 if (err) return done(err);
                 expect(res.error.text).to.equal("Unauthorized");
                 done();

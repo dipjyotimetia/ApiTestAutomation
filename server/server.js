@@ -1,4 +1,5 @@
 const express = require('express'),
+    basicAuth = require('express-basic-auth'),
     bodyParser = require('body-parser'),
     port = process.env.PORT || 3000,
     app = express();
@@ -8,6 +9,7 @@ app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
 app.use(bodyParser.json());
 
 let locationList = [];
@@ -54,6 +56,23 @@ app.get('/users/2/location', (req, res) => {
     } else {
         res.sendStatus(401);
     }
+});
+
+app.all('/*', (req, res, next) => {
+    //IRL, lookup in a database or something
+    if (typeof req.headers['x-api-key'] !== 'undefined' && req.headers['x-api-key'] === '123myapikey') {
+        next();
+    } else {
+        res.status(401).send({ error: "Bad or missing app identification header" });
+    }
+});
+
+app.get('/blog', basicAuth('correct', 'credentials'), (req, res) => {
+    res.send({ posts: ['one post', 'two post'] });
+});
+
+app.listen(app.get('port'), () => {
+    console.log("Example API listening on port " + app.get('port') + ', running in ' + app.settings.env + " mode.");
 });
 
 app.listen(port);
