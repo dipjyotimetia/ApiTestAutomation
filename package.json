@@ -1,13 +1,14 @@
 {
   "name": "apitestautomation",
   "version": "1.0.0",
-  "description": "Test api using mocha and chai",
+  "description": "Test api using mocha, chai and supertest",
   "main": "index.js",
   "scripts": {
     "prestart": "npm install;",
     "start": "JUNIT_REPORT_PATH=test-result/result.xml JUNIT_REPORT_STACK=1 mocha --timeout 25000 --colors --reporter mocha-jenkins-reporter || true",
     "test": "mocha --reporter mochawesome",
-    "server": "server/server.js"
+    "start:server": "node server/server.js",
+    "start:test": "concurrently \"npm:start:server\" \"npm:test\""
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
     "mocha": "^6.0.2",
     "mochawesome": "3.1.1",
     "mocha-junit-reporter": "1.21.0",
@@ -35,11 +37,15 @@
     "supertest": "^4.0.2",
     "express": "^4.16.4",
     "express-basic-auth": "1.1.6",
+    "cookie-parser": "~1.4.3"
+  },
+  "devDependencies": {
+    "chalk": "2.4.2",
+    "start-server-and-test": "^1.7.12",
+    "concurrently": "^4.1.0",
     "lodash": "4.17.11",
     "sinon": "7.3.1",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^2.6.3",
-    "cookie-parser": "~1.4.3",
-    "chalk": "2.4.2"
+    "rimraf": "^2.6.3"
   }
 }

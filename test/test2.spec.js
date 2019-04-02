@@ -6,24 +6,27 @@ const should = require('chai').should(),
 
 describe('Typi code', () => {
 
-    it('should have posts', (done) => {
-        api.get('/db')
-            .expect(200)
-            .end((err, res) => {
-                expect(res.body).to.have.property('posts');
-                expect(res.body.posts).to.not.equal(null);
-                done();
-            })
-    });
+    try {
+        it('should have posts', (done) => {
+            api.get('/db')
+                .expect(200)
+                .end((err, res) => {
+                    expect(res.body).to.have.property('posts');
+                    expect(res.body.posts).to.not.equal(null);
+                    done();
+                })
+        });
 
-    it('should have comments', (done) => {
-        api.get('/db')
-            .expect(200)
-            .end((err, res) => {
-                expect(res.body).to.have.property('comments');
-                done();
-            });
-    })
+        it('should have comments', (done) => {
+            api.get('/db')
+                .expect(200)
+                .end((err, res) => {
+                    expect(res.body).to.have.property('comments');
+                    done();
+                });
+        })
 
-
+    } catch (error) {
+        console.log(error);
+    }
 });    
