@@ -71,9 +71,5 @@ app.get('/blog', basicAuth('correct', 'credentials'), (req, res) => {
     res.send({ posts: ['one post', 'two post'] });
 });
 
-app.listen(app.get('port'), () => {
-    console.log("Example API listening on port " + app.get('port') + ', running in ' + app.settings.env + " mode.");
-});
-
 app.listen(port);
-console.log("Server loaded. The magic happens on port", port)
+console.log("Server loaded. Api endpoint on port", port)
