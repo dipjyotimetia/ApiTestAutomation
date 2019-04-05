@@ -2,6 +2,7 @@ const express = require('express'),
     basicAuth = require('express-basic-auth'),
     bodyParser = require('body-parser'),
     port = process.env.PORT || 3000,
+    chalk = require('chalk'),
     app = express();
 
 app.use(express.static(__dirname + '/public'))
@@ -72,4 +73,4 @@ app.get('/blog', basicAuth('correct', 'credentials'), (req, res) => {
 });
 
 app.listen(port);
-console.log("Server loaded. Api endpoint on port", port)
+console.log(chalk.yellow("Server loaded. Api endpoint on port"), port)
