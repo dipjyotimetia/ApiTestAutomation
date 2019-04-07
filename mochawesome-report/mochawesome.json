@@ -1,25 +1,25 @@
 {
   "stats": {
-    "suites": 5,
-    "tests": 6,
-    "passes": 3,
-    "pending": 0,
-    "failures": 3,
-    "start": "2019-04-05T09:58:31.040Z",
-    "end": "2019-04-05T09:58:37.878Z",
-    "duration": 6838,
-    "testsRegistered": 13,
-    "passPercent": 23.1,
-    "pendingPercent": 0,
-    "other": 1,
-    "hasOther": true,
-    "skipped": 7,
-    "hasSkipped": true,
-    "passPercentClass": "danger",
-    "pendingPercentClass": "danger"
+    "suites": 6,
+    "tests": 16,
+    "passes": 1,
+    "pending": 15,
+    "failures": 0,
+    "start": "2019-04-07T13:07:34.619Z",
+    "end": "2019-04-07T13:07:34.663Z",
+    "duration": 44,
+    "testsRegistered": 16,
+    "passPercent": 100,
+    "pendingPercent": 93.8,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "success"
   },
   "suites": {
-    "uuid": "a1cec4db-ecf9-4946-880f-3d5cf7bae351",
+    "uuid": "fd7cda8f-4877-4d77-a281-262abb58cf73",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,31 +28,11 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "d2c18715-8e56-45c6-a0f7-e313b78aace6",
+        "uuid": "0ae5e825-e012-49d5-9545-eccc30a700e2",
         "title": "User",
         "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test.spec.js",
         "file": "\\test\\test.spec.js",
-        "beforeHooks": [
-          {
-            "title": "\"before all\" hook",
-            "fullTitle": "User \"before all\" hook",
-            "timedOut": false,
-            "duration": 0,
-            "state": "failed",
-            "pass": false,
-            "fail": true,
-            "pending": false,
-            "code": "api.post('/locations')\n                .set('Accept', 'application/x-www-form-urlencoded')\n                .send({\n                    addressStreet: \"111 Main St\",\n                    addressCity: \"Portland\",\n                    addressState: \"OR\",\n                    addressZip: \"97209\",\n                    userId: 1\n                })\n                .expect('Content-Type', /json/)\n                .expect(200)\n                .end((err, res) => {\n                    location1 = res.body;\n                });\n            api.post('/locations')\n                .set('Accept', 'application/x-www-form-urlencoded')\n                .send({\n                    addressStreet: \"222 Main St\",\n                    addressCity: \"Portland\",\n                    addressState: \"OR\",\n                    addressZip: \"97209\",\n                    userId: 2\n                })\n                .expect('Content-Type', /json/)\n                .expect(200)\n                .end((err, res) => {\n                    location2 = res.body;\n                });\n            api.post('/locations')\n                .set('Accept', 'application/x-www-form-urlencoded')\n                .send({\n                    addressStreet: \"333 Main St\",\n                    addressCity: \"Portland\",\n                    addressState: \"OR\",\n                    addressZip: \"97209\",\n                    userId: 3\n                })\n                .expect('Content-Type', /json/)\n                .expect(200)\n                .end((err, res) => {\n                    location3 = res.body;\n                    done();\n                });",
-            "err": {
-              "message": "TypeError: Cannot read property 'body' of undefined",
-              "estack": "TypeError: Cannot read property 'body' of undefined\n    at Test.api.post.set.send.expect.expect.end (test\\test.spec.js:29:37)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:181:6)\n    at localAssert (node_modules\\supertest\\lib\\test.js:131:12)\n    at C:\\ccviews\\ApiTestAutomation\\node_modules\\supertest\\lib\\test.js:128:5\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:728:3)\n    at ClientRequest.req.once.err (node_modules\\superagent\\lib\\node\\index.js:647:10)\n    at Socket.socketErrorListener (_http_client.js:392:9)\n    at emitErrorNT (internal/streams/destroy.js:82:8)\n    at emitErrorAndCloseNT (internal/streams/destroy.js:50:3)\n    at process._tickCallback (internal/process/next_tick.js:63:19)"
-            },
-            "isRoot": false,
-            "uuid": "22e38389-8249-4ae9-a8cf-6996461c95a1",
-            "isHook": true,
-            "skipped": false
-          }
-        ],
+        "beforeHooks": [],
         "afterHooks": [],
         "tests": [
           {
@@ -62,13 +42,13 @@
             "duration": 0,
             "pass": false,
             "fail": false,
-            "pending": false,
-            "code": "api.get('/users/1')\n    .set('Accept', 'application/json')\n    .expect(200, done);",
+            "pending": true,
+            "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "366048fd-e480-435b-b1f4-2dd759ee7b28",
+            "uuid": "42d9dbd0-641c-48d2-ae38-da8fd4999560",
             "isHook": false,
-            "skipped": true
+            "skipped": false
           },
           {
             "title": "should be an object with keys and values",
@@ -77,13 +57,13 @@
             "duration": 0,
             "pass": false,
             "fail": false,
-            "pending": false,
-            "code": "api.get('/users/1')\n    .set('Accept', 'application/json')\n    .expect(200)\n    .end((err, res) => {\n        expect(res.body).to.have.property(\"name\");\n        expect(res.body.name).to.not.equal(null);\n        expect(res.body).to.have.property(\"email\");\n        expect(res.body.email).to.not.equal(null);\n        expect(res.body).to.have.property(\"phoneNumber\");\n        expect(res.body.phoneNumber).to.not.equal(null);\n        expect(res.body).to.have.property(\"role\");\n        expect(res.body.role).to.not.equal(null);\n        done();\n    });",
+            "pending": true,
+            "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "b8c40519-5694-41ee-9c08-630d07c541c5",
+            "uuid": "950d3cb6-e1ba-4973-8266-c049de335371",
             "isHook": false,
-            "skipped": true
+            "skipped": false
           },
           {
             "title": "should have a 10 digit phone number",
@@ -92,13 +72,13 @@
             "duration": 0,
             "pass": false,
             "fail": false,
-            "pending": false,
-            "code": "api.get('/users/1')\n    .set('Accept', 'application/json')\n    .expect(200)\n    .end((err, res) => {\n        expect(res.body.phoneNumber.length).to.equal(10);\n        done();\n    });",
+            "pending": true,
+            "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "0683a607-ec0c-44bc-a218-8646722ed9c3",
+            "uuid": "a4ff4ad2-ce7b-4a2c-bcc6-a424b737e1d5",
             "isHook": false,
-            "skipped": true
+            "skipped": false
           },
           {
             "title": "should have the role of admin",
@@ -107,13 +87,13 @@
             "duration": 0,
             "pass": false,
             "fail": false,
-            "pending": false,
-            "code": "api.get('/users/1')\n    .set('Accept', 'application/json')\n    .expect(200)\n    .end((err, res) => {\n        expect(res.body.role).to.equal(\"admin\");\n        done();\n    });",
+            "pending": true,
+            "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "b204df94-8166-461e-b9da-d0d12674fb57",
+            "uuid": "3f0ff610-3873-442d-a537-3402b1aedc2d",
             "isHook": false,
-            "skipped": true
+            "skipped": false
           },
           {
             "title": "should be updated with a new name",
@@ -122,13 +102,13 @@
             "duration": 0,
             "pass": false,
             "fail": false,
-            "pending": false,
-            "code": "api.put('/users/1')\n    .set('Accept', 'application/x-www-form-urlencoded')\n    .send({\n        name: \"Kevin\",\n        email: \"kevin@example.com\",\n        phoneNumber: \"9998887777\",\n        role: \"editor\"\n    })\n    .expect(200)\n    .end((err, res) => {\n        expect(res.body.name).to.equal(\"Kevin\");\n        expect(res.body.email).to.equal(\"kevin@example.com\");\n        expect(res.body.phoneNumber).to.equal(\"9998887777\");\n        expect(res.body.role).to.equal(\"editor\");\n        done();\n    });",
+            "pending": true,
+            "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "2bc2b7a7-e5a3-4f73-9596-021e50df4eab",
+            "uuid": "256ea47e-9a8e-4ae3-8371-9c83cc35c6aa",
             "isHook": false,
-            "skipped": true
+            "skipped": false
           },
           {
             "title": "should access their own locations",
@@ -137,13 +117,13 @@
             "duration": 0,
             "pass": false,
             "fail": false,
-            "pending": false,
-            "code": "api.get('/users/1/location')\n    .set('Accept', 'application/x-www-form-urlencoded')\n    .send({\n        userId: 1\n    })\n    .expect(200)\n    .end((err, res) => {\n        expect(res.body.userId).to.equal(1);\n        expect(res.body.addressCity).to.equal(\"Portland\");\n        done();\n    });",
+            "pending": true,
+            "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "336d5f4f-a72b-467d-9f88-dac1d3eec43d",
+            "uuid": "257c13e7-697d-466c-a9f9-e5f7278beb5e",
             "isHook": false,
-            "skipped": true
+            "skipped": false
           },
           {
             "title": "should not be able to access other users locations",
@@ -152,35 +132,35 @@
             "duration": 0,
             "pass": false,
             "fail": false,
-            "pending": false,
-            "code": "api.get('/users/2/location')\n    .set('Accept', 'application/x-www-form-urlencoded')\n    .send({\n        userId: 1\n    })\n    .expect(401)\n    .end((err, res) => {\n        if (err) return done(err);\n        expect(res.error.text).to.equal(\"Unauthorized\");\n        done();\n    });",
+            "pending": true,
+            "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "e39ee54b-c71c-4a88-8cdc-2ca65ee4e834",
+            "uuid": "89a9777c-9c8e-4f79-99d1-f5384df1fd70",
             "isHook": false,
-            "skipped": true
+            "skipped": false
           }
         ],
         "suites": [],
         "passes": [],
         "failures": [],
-        "pending": [],
-        "skipped": [
-          "366048fd-e480-435b-b1f4-2dd759ee7b28",
-          "b8c40519-5694-41ee-9c08-630d07c541c5",
-          "0683a607-ec0c-44bc-a218-8646722ed9c3",
-          "b204df94-8166-461e-b9da-d0d12674fb57",
-          "2bc2b7a7-e5a3-4f73-9596-021e50df4eab",
-          "336d5f4f-a72b-467d-9f88-dac1d3eec43d",
-          "e39ee54b-c71c-4a88-8cdc-2ca65ee4e834"
+        "pending": [
+          "42d9dbd0-641c-48d2-ae38-da8fd4999560",
+          "950d3cb6-e1ba-4973-8266-c049de335371",
+          "a4ff4ad2-ce7b-4a2c-bcc6-a424b737e1d5",
+          "3f0ff610-3873-442d-a537-3402b1aedc2d",
+          "256ea47e-9a8e-4ae3-8371-9c83cc35c6aa",
+          "257c13e7-697d-466c-a9f9-e5f7278beb5e",
+          "89a9777c-9c8e-4f79-99d1-f5384df1fd70"
         ],
+        "skipped": [],
         "duration": null,
         "root": false,
         "rootEmpty": false,
         "_timeout": 2000
       },
       {
-        "uuid": "50c5e6e6-f845-4b8e-bdf5-423b802a6b09",
+        "uuid": "ef23a3b4-ed26-437a-ad0b-eeb7faec86dd",
         "title": "Typi code",
         "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test2.spec.js",
         "file": "\\test\\test2.spec.js",
@@ -191,16 +171,14 @@
             "title": "should have posts",
             "fullTitle": "Typi code should have posts",
             "timedOut": false,
-            "duration": 1065,
-            "state": "passed",
-            "speed": "slow",
-            "pass": true,
+            "duration": 0,
+            "pass": false,
             "fail": false,
-            "pending": false,
-            "code": "api.get('/db')\n    .expect(200)\n    .end((err, res) => {\n        expect(res.body).to.have.property('posts');\n        expect(res.body.posts).to.not.equal(null);\n        done();\n    })",
+            "pending": true,
+            "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "d4d2e46f-e83e-4d53-8289-38562e875c79",
+            "uuid": "e4fb20ce-88f0-4269-9554-a1b8871325b7",
             "isHook": false,
             "skipped": false
           },
@@ -208,35 +186,33 @@
             "title": "should have comments",
             "fullTitle": "Typi code should have comments",
             "timedOut": false,
-            "duration": 695,
-            "state": "passed",
-            "speed": "slow",
-            "pass": true,
+            "duration": 0,
+            "pass": false,
             "fail": false,
-            "pending": false,
-            "code": "api.get('/db')\n    .expect(200)\n    .end((err, res) => {\n        expect(res.body).to.have.property('comments');\n        done();\n    });",
+            "pending": true,
+            "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "0ce374e6-f4fe-4797-ad1b-f680c9c763e4",
+            "uuid": "fcc5b0d6-1b7e-4c4c-a607-b554483a75a5",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
-        "passes": [
-          "d4d2e46f-e83e-4d53-8289-38562e875c79",
-          "0ce374e6-f4fe-4797-ad1b-f680c9c763e4"
-        ],
+        "passes": [],
         "failures": [],
-        "pending": [],
+        "pending": [
+          "e4fb20ce-88f0-4269-9554-a1b8871325b7",
+          "fcc5b0d6-1b7e-4c4c-a607-b554483a75a5"
+        ],
         "skipped": [],
-        "duration": 1760,
+        "duration": null,
         "root": false,
         "rootEmpty": false,
         "_timeout": 2000
       },
       {
-        "uuid": "3af7b33e-02ef-4e22-89e4-298e708e07ec",
+        "uuid": "66b6966f-c557-415e-8c41-b974de6fb2d5",
         "title": "Authentication",
         "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test3.spec.js",
         "file": "\\test\\test3.spec.js",
@@ -247,18 +223,14 @@
             "title": "errors if wrong basic auth",
             "fullTitle": "Authentication errors if wrong basic auth",
             "timedOut": false,
-            "duration": 1006,
-            "state": "failed",
+            "duration": 0,
             "pass": false,
-            "fail": true,
-            "pending": false,
-            "code": "api.get('/blog')\n    .set('x-api-key', '123myapikey')\n    .auth('incorrect', 'credentials')\n    .expect(401, done)",
-            "err": {
-              "message": "Error: ECONNREFUSED: Connection refused",
-              "estack": "Error: ECONNREFUSED: Connection refused\n    at Test.assert (node_modules\\supertest\\lib\\test.js:165:15)\n    at localAssert (node_modules\\supertest\\lib\\test.js:131:12)\n    at C:\\ccviews\\ApiTestAutomation\\node_modules\\supertest\\lib\\test.js:128:5\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:728:3)\n    at ClientRequest.req.once.err (node_modules\\superagent\\lib\\node\\index.js:647:10)\n    at Socket.socketErrorListener (_http_client.js:392:9)\n    at emitErrorNT (internal/streams/destroy.js:82:8)\n    at emitErrorAndCloseNT (internal/streams/destroy.js:50:3)\n    at process._tickCallback (internal/process/next_tick.js:63:19)"
-            },
+            "fail": false,
+            "pending": true,
+            "code": "",
+            "err": {},
             "isRoot": false,
-            "uuid": "14e2367d-409a-460a-aac2-af5306fd9c2a",
+            "uuid": "fcc43de9-a662-4527-af39-528884e7cc04",
             "isHook": false,
             "skipped": false
           },
@@ -266,37 +238,33 @@
             "title": "errors if bad x-api-key header",
             "fullTitle": "Authentication errors if bad x-api-key header",
             "timedOut": false,
-            "duration": 1001,
-            "state": "failed",
+            "duration": 0,
             "pass": false,
-            "fail": true,
-            "pending": false,
-            "code": "api.get('/blog')\n    .auth('correct', 'credentials')\n    .expect(401)\n    .expect({\n        error: \"Bad or missing app identification header\"\n    }, done);",
-            "err": {
-              "message": "Error: ECONNREFUSED: Connection refused",
-              "estack": "Error: ECONNREFUSED: Connection refused\n    at Test.assert (node_modules\\supertest\\lib\\test.js:165:15)\n    at localAssert (node_modules\\supertest\\lib\\test.js:131:12)\n    at C:\\ccviews\\ApiTestAutomation\\node_modules\\supertest\\lib\\test.js:128:5\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:728:3)\n    at ClientRequest.req.once.err (node_modules\\superagent\\lib\\node\\index.js:647:10)\n    at Socket.socketErrorListener (_http_client.js:392:9)\n    at emitErrorNT (internal/streams/destroy.js:82:8)\n    at emitErrorAndCloseNT (internal/streams/destroy.js:50:3)\n    at process._tickCallback (internal/process/next_tick.js:63:19)"
-            },
+            "fail": false,
+            "pending": true,
+            "code": "",
+            "err": {},
             "isRoot": false,
-            "uuid": "024cdd2f-bc37-4627-8713-cb8e298b8596",
+            "uuid": "93e61e68-b00f-44ca-8675-518412e0d643",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [],
-        "failures": [
-          "14e2367d-409a-460a-aac2-af5306fd9c2a",
-          "024cdd2f-bc37-4627-8713-cb8e298b8596"
+        "failures": [],
+        "pending": [
+          "fcc43de9-a662-4527-af39-528884e7cc04",
+          "93e61e68-b00f-44ca-8675-518412e0d643"
         ],
-        "pending": [],
         "skipped": [],
-        "duration": 2007,
+        "duration": null,
         "root": false,
         "rootEmpty": false,
         "_timeout": 2000
       },
       {
-        "uuid": "21f75ffc-d77f-4dec-bdba-ba36d6712b91",
+        "uuid": "6257707e-788c-43a6-9900-9d08498fdf07",
         "title": "/blog",
         "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test3.spec.js",
         "file": "\\test\\test3.spec.js",
@@ -307,36 +275,32 @@
             "title": "returns blog posts as JSON",
             "fullTitle": "/blog returns blog posts as JSON",
             "timedOut": false,
-            "duration": 1002,
-            "state": "failed",
+            "duration": 0,
             "pass": false,
-            "fail": true,
-            "pending": false,
-            "code": "api.get('/blog')\n    .set('x-api-key', '123myapikey')\n    .auth('correct', 'credentials')\n    .expect(200)\n    .expect('Content-Type', /json/)\n    .end((err, res) => {\n        if (err) return done(err);\n        res.body.should.have.property('posts').and.be.instanceof(Array);\n        done();\n    });",
-            "err": {
-              "message": "Error: ECONNREFUSED: Connection refused",
-              "estack": "Error: ECONNREFUSED: Connection refused\n    at Test.assert (node_modules\\supertest\\lib\\test.js:165:15)\n    at localAssert (node_modules\\supertest\\lib\\test.js:131:12)\n    at C:\\ccviews\\ApiTestAutomation\\node_modules\\supertest\\lib\\test.js:128:5\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:728:3)\n    at ClientRequest.req.once.err (node_modules\\superagent\\lib\\node\\index.js:647:10)\n    at Socket.socketErrorListener (_http_client.js:392:9)\n    at emitErrorNT (internal/streams/destroy.js:82:8)\n    at emitErrorAndCloseNT (internal/streams/destroy.js:50:3)\n    at process._tickCallback (internal/process/next_tick.js:63:19)"
-            },
+            "fail": false,
+            "pending": true,
+            "code": "",
+            "err": {},
             "isRoot": false,
-            "uuid": "45d0990a-e434-493b-a22a-ad1353b5aa78",
+            "uuid": "e69f5644-add5-4a3f-9883-7a339cb69231",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [],
-        "failures": [
-          "45d0990a-e434-493b-a22a-ad1353b5aa78"
+        "failures": [],
+        "pending": [
+          "e69f5644-add5-4a3f-9883-7a339cb69231"
         ],
-        "pending": [],
         "skipped": [],
-        "duration": 1002,
+        "duration": null,
         "root": false,
         "rootEmpty": false,
         "_timeout": 2000
       },
       {
-        "uuid": "dbab1d91-7ed4-48a3-9fe3-1f3764ca20a5",
+        "uuid": "251ec2e4-1f57-4b54-9e7d-d53670ae3ca4",
         "title": "Text Axios",
         "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test4_axis.spec.js",
         "file": "\\test\\test4_axis.spec.js",
@@ -347,28 +311,96 @@
             "title": "Text typiCode",
             "fullTitle": "Text Axios Text typiCode",
             "timedOut": false,
-            "duration": 1021,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": true,
+            "code": "",
+            "err": {},
+            "isRoot": false,
+            "uuid": "51eab20e-7fa7-450f-8986-491925d02b72",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "github api, multiple request",
+            "fullTitle": "Text Axios github api, multiple request",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": true,
+            "code": "",
+            "err": {},
+            "isRoot": false,
+            "uuid": "4c077456-fa8d-485b-ab76-fac4b79dbf0b",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "local jsonserver",
+            "fullTitle": "Text Axios local jsonserver",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": true,
+            "code": "",
+            "err": {},
+            "isRoot": false,
+            "uuid": "5b587304-a37a-44e3-a32c-de2b6ad7f84c",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [],
+        "pending": [
+          "51eab20e-7fa7-450f-8986-491925d02b72",
+          "4c077456-fa8d-485b-ab76-fac4b79dbf0b",
+          "5b587304-a37a-44e3-a32c-de2b6ad7f84c"
+        ],
+        "skipped": [],
+        "duration": null,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "df1bcfeb-75dd-44aa-8df3-acc3badf492d",
+        "title": "API Locations",
+        "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test5.spec.js",
+        "file": "\\test\\test5.spec.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Test Locations",
+            "fullTitle": "API Locations Test Locations",
+            "timedOut": false,
+            "duration": 25,
             "state": "passed",
-            "speed": "slow",
+            "speed": "fast",
             "pass": true,
             "fail": false,
             "pending": false,
-            "code": "let res = await axios.post(\"https://jsonplaceholder.typicode.com/posts\");\nconsole.log(`Status code: ${res.status}`);\nconsole.log(`Status text: ${res.statusText}`);\nconsole.log(`Request method: ${res.request.method}`);\nconsole.log(`Path: ${res.request.path}`);\nconsole.log(`Date: ${res.headers.date}`);\nconsole.log(`Data: ${res.data}`);",
+            "code": "axios.default\n  .get(\"https://sandbox.api.nab/v2/accounts?v=1\", {\n    headers: {\n      Authorization: \"02ebe067-0532-4bd4-937e-1c667214f042\"\n    }\n  })\n  .then(res => {\n    console.log(res.data.response.accountSummaries);\n  })\n  .catch(err => {\n    console.log(err);\n  });",
             "err": {},
             "isRoot": false,
-            "uuid": "20b1631a-b279-4a81-9e1b-b3132be29a03",
+            "uuid": "0371f76c-6663-4d9b-8a51-feecbe0bfa27",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "20b1631a-b279-4a81-9e1b-b3132be29a03"
+          "0371f76c-6663-4d9b-8a51-feecbe0bfa27"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 1021,
+        "duration": 25,
         "root": false,
         "rootEmpty": false,
         "_timeout": 2000

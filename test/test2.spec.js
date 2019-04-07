@@ -4,7 +4,7 @@ const should = require('chai').should(),
     supertest = require('supertest'),
     api = supertest('https://my-json-server.typicode.com/typicode/demo');
 
-describe('Typi code', () => {
+describe.skip('Typi code', () => {
 
     try {
         it('should have posts', (done) => {

@@ -1,0 +1,44 @@
+{
+    "locationSearchResponse": {
+        "totalRecords": 6,
+        "address": {
+            "formattedAddress": "Tasmania 7030, Australia",
+            "latitude": -42.1876915,
+            "longitude": 147.0214014
+        },
+        "viewport": {
+            "swLat": -44.8826008,
+            "swLng": 144.3264921,
+            "neLat": -39.4927822,
+            "neLng": 149.7163107
+        },
+        "locations": [
+            {
+                "apiStructType": "atm",
+                "atm": {
+                    "location": "Offsite",
+                    "isDeposit": false,
+                    "isDisabilityApproved": true,
+                    "isAudio": false,
+                    "source": "NAB",
+                    "address3": "Eastlands Shopping Centre",
+                    "id": 16271,
+                    "key": "nab_3B93",
+                    "description": "Eastlands Shopping Centre",
+                    "address1": "1 Bligh Street",
+                    "suburb": "Rosny Park",
+                    "state": "TAS",
+                    "postcode": "7018",
+                    "latitude": -42.8680382,
+                    "longitude": 147.3692568,
+                    "hours": "Mon-Thu 09.00am-05.30pm, Fri 09.00am-08.00pm, Sat 09.00am-05.00pm, Sun 10.00am-04.00pm",
+                    "distanceToLocation": 80844
+                }
+            }
+        ]
+    },
+    "status": {
+        "code": "API-200",
+        "message": "Success"
+    }
+}

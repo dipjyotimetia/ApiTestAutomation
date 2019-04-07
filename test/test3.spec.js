@@ -2,7 +2,7 @@ const should = require('chai').should(),
     supertest = require('supertest'),
     api = supertest('http://localhost:3000');
 
-describe('Authentication', () => {
+describe.skip('Authentication', () => {
 
     try {
         it('errors if wrong basic auth', (done) => {
@@ -25,7 +25,7 @@ describe('Authentication', () => {
     }
 });
 
-describe('/blog', () => {
+describe.skip('/blog', () => {
 
     try {
         it('returns blog posts as JSON', (done) => {

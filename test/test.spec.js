@@ -4,7 +4,7 @@ const should = require('chai').should(),
     supertest = require('supertest'),
     api = supertest('http://localhost:3000');
 
-describe('User', () => {
+describe.skip('User', () => {
 
     try {
         let location1;
