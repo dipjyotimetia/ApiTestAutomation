@@ -29,7 +29,7 @@
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
-    "mocha": "^6.0.2",
+    "mocha": "^6.1.2",
     "mochawesome": "3.1.1",
     "mocha-junit-reporter": "1.21.0",
     "mocha-multi": "1.0.1",
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "chalk": "2.4.2",
-    "start-server-and-test": "^1.7.12",
+    "start-server-and-test": "^1.7.13",
     "concurrently": "^4.1.0",
     "lodash": "4.17.11",
     "sinon": "7.3.1",

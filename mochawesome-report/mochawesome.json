@@ -2,24 +2,24 @@
   "stats": {
     "suites": 6,
     "tests": 17,
-    "passes": 2,
-    "pending": 15,
+    "passes": 7,
+    "pending": 10,
     "failures": 0,
-    "start": "2019-04-07T13:22:33.533Z",
-    "end": "2019-04-07T13:22:33.578Z",
-    "duration": 45,
+    "start": "2019-04-09T11:22:41.899Z",
+    "end": "2019-04-09T11:22:46.235Z",
+    "duration": 4336,
     "testsRegistered": 17,
     "passPercent": 100,
-    "pendingPercent": 88.2,
+    "pendingPercent": 58.8,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
     "passPercentClass": "success",
-    "pendingPercentClass": "success"
+    "pendingPercentClass": "warning"
   },
   "suites": {
-    "uuid": "86036952-a536-4b17-89c8-e5f4f9fb3d61",
+    "uuid": "a3632c20-2465-402b-8107-769567af3cb4",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "84c3ad94-f180-4e52-81bd-76f039cfda0b",
+        "uuid": "d905885e-925c-46b0-bcfe-41bfbe1bc321",
         "title": "User",
         "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test.spec.js",
         "file": "\\test\\test.spec.js",
@@ -46,7 +46,7 @@
             "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "0b0e8463-1b3e-4058-a1b6-d6d803082a35",
+            "uuid": "3734ec75-1ea8-4ee7-9f9a-dd91acc5c325",
             "isHook": false,
             "skipped": false
           },
@@ -61,7 +61,7 @@
             "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "456ef60c-98a7-41d0-a157-a847221fa122",
+            "uuid": "d5882699-12f2-42d5-b776-1a709004ce78",
             "isHook": false,
             "skipped": false
           },
@@ -76,7 +76,7 @@
             "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "82bcf193-2b78-4e03-bb67-1e37d0249c8b",
+            "uuid": "2e6e424b-f50a-4091-a498-3c0eb360a4c0",
             "isHook": false,
             "skipped": false
           },
@@ -91,7 +91,7 @@
             "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "db28b771-b171-4957-a897-b749863e8dac",
+            "uuid": "9a8c4f3d-87bb-4d64-bc95-438adf18ccc6",
             "isHook": false,
             "skipped": false
           },
@@ -106,7 +106,7 @@
             "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "d0338d92-4af1-458d-a330-e6812b9d0e65",
+            "uuid": "0b0d6286-322d-402f-9640-e46e99c298c6",
             "isHook": false,
             "skipped": false
           },
@@ -121,7 +121,7 @@
             "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "0c7b6b5d-aae5-41bb-b2f9-1795cfc15bf1",
+            "uuid": "86c3574d-f0a9-47b9-9994-72c8f86c7909",
             "isHook": false,
             "skipped": false
           },
@@ -136,7 +136,7 @@
             "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "81fb139d-125d-4cb3-b7f6-f9db3610d16c",
+            "uuid": "ced952d0-296d-4424-bad3-65f4c810cd62",
             "isHook": false,
             "skipped": false
           }
@@ -145,13 +145,13 @@
         "passes": [],
         "failures": [],
         "pending": [
-          "0b0e8463-1b3e-4058-a1b6-d6d803082a35",
-          "456ef60c-98a7-41d0-a157-a847221fa122",
-          "82bcf193-2b78-4e03-bb67-1e37d0249c8b",
-          "db28b771-b171-4957-a897-b749863e8dac",
-          "d0338d92-4af1-458d-a330-e6812b9d0e65",
-          "0c7b6b5d-aae5-41bb-b2f9-1795cfc15bf1",
-          "81fb139d-125d-4cb3-b7f6-f9db3610d16c"
+          "3734ec75-1ea8-4ee7-9f9a-dd91acc5c325",
+          "d5882699-12f2-42d5-b776-1a709004ce78",
+          "2e6e424b-f50a-4091-a498-3c0eb360a4c0",
+          "9a8c4f3d-87bb-4d64-bc95-438adf18ccc6",
+          "0b0d6286-322d-402f-9640-e46e99c298c6",
+          "86c3574d-f0a9-47b9-9994-72c8f86c7909",
+          "ced952d0-296d-4424-bad3-65f4c810cd62"
         ],
         "skipped": [],
         "duration": null,
@@ -160,7 +160,7 @@
         "_timeout": 2000
       },
       {
-        "uuid": "4e86ce86-249d-4de7-981f-8ef1d423263c",
+        "uuid": "db7a1199-25e7-4016-b294-740e1ba67581",
         "title": "Typi code",
         "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test2.spec.js",
         "file": "\\test\\test2.spec.js",
@@ -171,14 +171,16 @@
             "title": "should have posts",
             "fullTitle": "Typi code should have posts",
             "timedOut": false,
-            "duration": 0,
-            "pass": false,
+            "duration": 1142,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
             "fail": false,
-            "pending": true,
-            "code": "",
+            "pending": false,
+            "code": "api.get('/db')\n    .expect(200)\n    .end((err, res) => {\n        expect(res.body).to.have.property('posts');\n        expect(res.body.posts).to.not.equal(null);\n        done();\n    })",
             "err": {},
             "isRoot": false,
-            "uuid": "746b8992-940c-4717-a83f-547011f1e5f5",
+            "uuid": "7fdd3f79-c441-4419-9793-c9127001250b",
             "isHook": false,
             "skipped": false
           },
@@ -186,33 +188,35 @@
             "title": "should have comments",
             "fullTitle": "Typi code should have comments",
             "timedOut": false,
-            "duration": 0,
-            "pass": false,
+            "duration": 932,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
             "fail": false,
-            "pending": true,
-            "code": "",
+            "pending": false,
+            "code": "api.get('/db')\n    .expect(200)\n    .end((err, res) => {\n        expect(res.body).to.have.property('comments');\n        done();\n    });",
             "err": {},
             "isRoot": false,
-            "uuid": "ef55f0d3-2602-4363-9f62-508063071d93",
+            "uuid": "02dd4d18-b9df-4fa2-a017-47ee442dc090",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
-        "passes": [],
-        "failures": [],
-        "pending": [
-          "746b8992-940c-4717-a83f-547011f1e5f5",
-          "ef55f0d3-2602-4363-9f62-508063071d93"
+        "passes": [
+          "7fdd3f79-c441-4419-9793-c9127001250b",
+          "02dd4d18-b9df-4fa2-a017-47ee442dc090"
         ],
+        "failures": [],
+        "pending": [],
         "skipped": [],
-        "duration": null,
+        "duration": 2074,
         "root": false,
         "rootEmpty": false,
         "_timeout": 2000
       },
       {
-        "uuid": "2326542f-7c90-4b05-9585-08529a145c55",
+        "uuid": "9d310fb6-f1b7-457c-bdc8-69b8611c7c51",
         "title": "Authentication",
         "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test3.spec.js",
         "file": "\\test\\test3.spec.js",
@@ -230,7 +234,7 @@
             "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "884df5aa-6dc4-4d7c-bcff-4f59a7c1fc57",
+            "uuid": "1f7514a8-1207-4cec-829c-f3153305c22e",
             "isHook": false,
             "skipped": false
           },
@@ -245,7 +249,7 @@
             "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "dc166dbb-cd1a-485f-a29a-b086335af32b",
+            "uuid": "19d9291f-179e-479d-9f60-cefc9a864463",
             "isHook": false,
             "skipped": false
           }
@@ -254,8 +258,8 @@
         "passes": [],
         "failures": [],
         "pending": [
-          "884df5aa-6dc4-4d7c-bcff-4f59a7c1fc57",
-          "dc166dbb-cd1a-485f-a29a-b086335af32b"
+          "1f7514a8-1207-4cec-829c-f3153305c22e",
+          "19d9291f-179e-479d-9f60-cefc9a864463"
         ],
         "skipped": [],
         "duration": null,
@@ -264,7 +268,7 @@
         "_timeout": 2000
       },
       {
-        "uuid": "e53fd6dd-beeb-4fbb-b02e-1bd5254b9430",
+        "uuid": "6fbfa9b6-438e-4b9e-acad-3a5cb09faf2d",
         "title": "/blog",
         "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test3.spec.js",
         "file": "\\test\\test3.spec.js",
@@ -282,7 +286,7 @@
             "code": "",
             "err": {},
             "isRoot": false,
-            "uuid": "d4164786-2594-4467-be40-4414a4064382",
+            "uuid": "cd0cffc2-7f0c-4fa1-97aa-d8184eb21166",
             "isHook": false,
             "skipped": false
           }
@@ -291,7 +295,7 @@
         "passes": [],
         "failures": [],
         "pending": [
-          "d4164786-2594-4467-be40-4414a4064382"
+          "cd0cffc2-7f0c-4fa1-97aa-d8184eb21166"
         ],
         "skipped": [],
         "duration": null,
@@ -300,7 +304,7 @@
         "_timeout": 2000
       },
       {
-        "uuid": "51580cbf-b211-4e6c-b375-c57f996b15e2",
+        "uuid": "fd7415e5-97c6-47ca-8156-48646b9a8b47",
         "title": "Text Axios",
         "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test4_axis.spec.js",
         "file": "\\test\\test4_axis.spec.js",
@@ -311,14 +315,16 @@
             "title": "Text typiCode",
             "fullTitle": "Text Axios Text typiCode",
             "timedOut": false,
-            "duration": 0,
-            "pass": false,
+            "duration": 1030,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
             "fail": false,
-            "pending": true,
-            "code": "",
+            "pending": false,
+            "code": "let res = await axios.default.post(\n  \"https://jsonplaceholder.typicode.com/posts\"\n);\nconsole.log(`Status code: ${res.status}`);\nconsole.log(`Status text: ${res.statusText}`);\nconsole.log(`Request method: ${res.request.method}`);\nconsole.log(`Path: ${res.request.path}`);\nconsole.log(`Date: ${res.headers.date}`);\nconsole.log(`Data: ${res.data}`);",
             "err": {},
             "isRoot": false,
-            "uuid": "ab1aa564-7864-435d-ad1e-a237442714ee",
+            "uuid": "59f26e71-6c34-42ac-88db-b3931ab0b3ef",
             "isHook": false,
             "skipped": false
           },
@@ -326,14 +332,16 @@
             "title": "github api, multiple request",
             "fullTitle": "Text Axios github api, multiple request",
             "timedOut": false,
-            "duration": 0,
-            "pass": false,
+            "duration": 1155,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
             "fail": false,
-            "pending": true,
-            "code": "",
+            "pending": false,
+            "code": "let [u1, u2, u3] = await Promise.all([\n  axios.default.get(\"https://api.github.com/users/janbodnar\"),\n  axios.default.get(\"https://api.github.com/users/symfony\"),\n  axios.default.get(\"https://api.github.com/users\")\n]);\nconsole.log(`Jan Bodnar: ${u1.data.created_at}`);\nconsole.log(`Symfony: ${u2.data.created_at}`);\nconsole.log(`test:${u3.statusText}`);",
             "err": {},
             "isRoot": false,
-            "uuid": "10d89e35-61fd-4596-b99a-15858f7b52d9",
+            "uuid": "45a7fab3-0d2b-4421-8a18-e74742ac5cf4",
             "isHook": false,
             "skipped": false
           },
@@ -341,34 +349,36 @@
             "title": "local jsonserver",
             "fullTitle": "Text Axios local jsonserver",
             "timedOut": false,
-            "duration": 0,
-            "pass": false,
+            "duration": 1,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
             "fail": false,
-            "pending": true,
-            "code": "",
+            "pending": false,
+            "code": "axios.default\n  .get(\"http://localhost:3000/users\")\n  .then(resp => {\n    let data = resp.data;\n    data.forEach(e => {\n      console.log(`${e.first_name}, ${e.last_name}, ${e.email}`);\n    });\n  })\n  .catch(error => {\n    console.log(error);\n  });",
             "err": {},
             "isRoot": false,
-            "uuid": "52ed3cf3-b683-4151-8c44-6e8e5cd60323",
+            "uuid": "ba5296d4-2b7a-4195-9980-c742e983a98c",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
-        "passes": [],
-        "failures": [],
-        "pending": [
-          "ab1aa564-7864-435d-ad1e-a237442714ee",
-          "10d89e35-61fd-4596-b99a-15858f7b52d9",
-          "52ed3cf3-b683-4151-8c44-6e8e5cd60323"
+        "passes": [
+          "59f26e71-6c34-42ac-88db-b3931ab0b3ef",
+          "45a7fab3-0d2b-4421-8a18-e74742ac5cf4",
+          "ba5296d4-2b7a-4195-9980-c742e983a98c"
         ],
+        "failures": [],
+        "pending": [],
         "skipped": [],
-        "duration": null,
+        "duration": 2186,
         "root": false,
         "rootEmpty": false,
         "_timeout": 2000
       },
       {
-        "uuid": "222ec83d-2399-46f9-a2ed-fb6539a316c5",
+        "uuid": "3549eb8b-fa4f-44d3-b445-b1b7b1405579",
         "title": "API Locations",
         "fullFile": "C:\\ccviews\\ApiTestAutomation\\test\\test5.spec.js",
         "file": "\\test\\test5.spec.js",
@@ -376,10 +386,10 @@
         "afterHooks": [],
         "tests": [
           {
-            "title": "Test Locations",
-            "fullTitle": "API Locations Test Locations",
+            "title": "Test Locations details",
+            "fullTitle": "API Locations Test Locations details",
             "timedOut": false,
-            "duration": 24,
+            "duration": 1,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -388,15 +398,15 @@
             "code": "axios\n  .get(\"https://sandbox.api.nab/v2/accounts?v=1\")\n  .then(res => {\n    console.log(res.data.response.accountSummaries);\n  })\n  .catch(err => {\n    console.log(err);\n  });",
             "err": {},
             "isRoot": false,
-            "uuid": "aa7f253f-2271-490b-bd8b-ee23191ab4ca",
+            "uuid": "74827e7e-2a73-4f58-b8c7-5281b1350dcc",
             "isHook": false,
             "skipped": false
           },
           {
-            "title": "Test account",
-            "fullTitle": "API Locations Test account",
+            "title": "Test account details",
+            "fullTitle": "API Locations Test account details",
             "timedOut": false,
-            "duration": 3,
+            "duration": 4,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -405,20 +415,20 @@
             "code": "axios\n  .post(\"https://sandbox.api.nab/v2/accounts/balance?v=1\", accountPayLoad)\n  .then(res => {\n    console.log(res.data.response.accounts);\n  })\n  .catch(err => {\n    console.log(err);\n  });",
             "err": {},
             "isRoot": false,
-            "uuid": "94de0844-a466-4c39-819c-efad442f3c83",
+            "uuid": "2bfea961-6920-468d-913c-b4246f4a2212",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "aa7f253f-2271-490b-bd8b-ee23191ab4ca",
-          "94de0844-a466-4c39-819c-efad442f3c83"
+          "74827e7e-2a73-4f58-b8c7-5281b1350dcc",
+          "2bfea961-6920-468d-913c-b4246f4a2212"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 27,
+        "duration": 5,
         "root": false,
         "rootEmpty": false,
         "_timeout": 2000

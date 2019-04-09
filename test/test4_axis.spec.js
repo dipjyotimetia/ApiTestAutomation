@@ -4,7 +4,8 @@ const axios = require("axios"),
   assert = require("chai").assert;
 
 describe("Text Axios", async () => {
-  it.skip("Text typiCode", async () => {
+  
+  it("Text typiCode", async () => {
     let res = await axios.default.post(
       "https://jsonplaceholder.typicode.com/posts"
     );
@@ -17,7 +18,7 @@ describe("Text Axios", async () => {
     console.log(`Data: ${res.data}`);
   });
 
-  it.skip("github api, multiple request", async () => {
+  it("github api, multiple request", async () => {
     let [u1, u2, u3] = await Promise.all([
       axios.default.get("https://api.github.com/users/janbodnar"),
       axios.default.get("https://api.github.com/users/symfony"),
@@ -29,7 +30,7 @@ describe("Text Axios", async () => {
     console.log(`test:${u3.statusText}`);
   });
 
-  it.skip("local jsonserver", async () => {
+  it("local jsonserver", async () => {
     axios.default
       .get("http://localhost:3000/users")
       .then(resp => {
