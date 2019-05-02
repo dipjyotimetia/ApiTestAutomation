@@ -42,7 +42,11 @@
     "faker": "4.1.0",
     "axios": "0.18.0",
     "json-server": "0.14.2",
-    "cross-env": "^5.2.0"
+    "cross-env": "^5.2.0",
+    "knex": "0.16.5",
+    "lokijs": "1.5.6",
+    "pg": "7.10.0",
+    "mssql": "5.1.0"
   },
   "devDependencies": {
     "chalk": "2.4.2",

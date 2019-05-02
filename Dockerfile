@@ -13,5 +13,4 @@ RUN npm --allow-root install
 # build app source code
 COPY . ./
 
-# runtime configs
-ENTRYPOINT ["./entrypoint.sh"]
+RUN npm test
