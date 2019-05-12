@@ -26,13 +26,13 @@
   },
   "homepage": "https://github.com/TestautoDev/ApiTestAutomation#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.19.0",
     "chai": "^4.2.0",
-    "chai-http": "^4.2.1",
+    "chai-http": "^4.3.0",
     "mocha": "^6.1.4",
     "mochawesome": "3.1.2",
     "mocha-junit-reporter": "1.22.0",
-    "mocha-multi": "1.0.1",
+    "mocha-multi": "1.1.0",
     "mocha-jenkins-reporter": "^0.4.1",
     "supertest": "^4.0.2",
     "express": "^4.16.4",
@@ -43,9 +43,9 @@
     "axios": "0.18.0",
     "json-server": "0.14.2",
     "cross-env": "^5.2.0",
-    "knex": "0.16.5",
+    "knex": "0.16.6",
     "lokijs": "1.5.6",
-    "pg": "7.10.0",
+    "pg": "7.11.0",
     "mssql": "5.1.0"
   },
   "devDependencies": {
