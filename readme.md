@@ -16,6 +16,39 @@ const expect = require('chai').expect,                   // Import chai for asse
     supertest = require('supertest'),                  // Api test library
     logger = require('../config/logger')(__filename), // Logging info/errors
 ```
+## Example Get Start
+```javascript
+const expect = require('chai').expect,
+    faker = require('faker'),
+    supertest = require('supertest'),
+    account = require('../api/Account'),
+    config = require('../config/config'),
+    logger = require('../config/logger')(__filename),
+    api = supertest(`${config.BASE_URL}`);
+
+describe(`Test Description`,()=>{
+
+    let clientAuth;
+    let authToken;
+
+    beforeEach(`GetAuthToken`, async ()=>{
+         
+    });
+
+    it(`Test Name`, async ()=>{
+        try {
+          const res = await api.get('END_POINT')
+                .set('Accept', 'application/x-www-form-urlencoded')
+                .expect(200);
+           expect(res.body).to.have.property('PROPERTY_NAME');     
+        } catch (error) {
+            logger.error(`Error reason`${error});
+            throw Error(error);
+        }
+    });
+})
+
+```
 ### Built With  
 * [SuperTest](https://github.com/visionmedia/supertest/blob/master/README.md)
 * [Sinon](https://sinonjs.org/)
@@ -31,4 +64,4 @@ const expect = require('chai').expect,                   // Import chai for asse
 * [Prettyjson](http://rafeca.com/prettyjson/)
 
 ### Results  
-<img src="https://github.com/dipjyotimetia/screenshots/blob/master/api/result.png" width="300">
+<img src="https://github.com/dipjyotimetia/screenshots/blob/master/api/result.png" width="400">
