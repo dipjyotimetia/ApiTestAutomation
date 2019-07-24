@@ -50,18 +50,27 @@ describe(`Test Description`,()=>{
 
 ```
 ### Built With  
-* [SuperTest](https://github.com/visionmedia/supertest/blob/master/README.md)
-* [Sinon](https://sinonjs.org/)
-* [Axios](https://github.com/axios/axios/blob/master/README.md)
-* [Mocha](https://mochajs.org/)
-* [Lokijs](http://lokijs.org/)
-* [Mochawesome](https://github.com/adamgruber/mochawesome/blob/master/README.md)
-* [Winston](https://github.com/winstonjs/winston/blob/master/README.md)
-* [Knex](https://knexjs.org/)
-* [DotEnv](https://www.npmjs.com/package/dotenv)
-* [Chai](https://www.chaijs.com/)
-* [Faker](https://www.npmjs.com/package/faker)
-* [Prettyjson](http://rafeca.com/prettyjson/)
+
+| **Dependency**                                                                    | **Use**                                                          |
+| --------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| [SuperTest](https://github.com/visionmedia/supertest/blob/master/README.md)       | HTTP assertions made easy via superagent to test GET/POST/Delete |
+| [Sinon](https://sinonjs.org/)                                                     | Standalone test spies, stubs and mocks for JavaScript            |
+| [Axios](https://github.com/axios/axios/blob/master/README.md)                     | Promise based HTTP client for the browser and node.js            |
+| [Mocha](https://mochajs.org/)                                                     | Mocha is a feature-rich JavaScript test framework                |
+| [Lokijs](http://lokijs.org/)                                                      | In-memory JavaScript Datastore with Persistence                  |
+| [Mochawesome](https://github.com/adamgruber/mochawesome/blob/master/README.md)    | Mochawesome is a custom reporter for use with the JS mocha       |
+| [Winston](https://github.com/winstonjs/winston/blob/master/README.md)             | simple and universal logging library                             |
+| [Knex](https://knexjs.org/)                                                       | SQL query builder for Postgres, MSSQL, MySQL                     |
+| [DotEnv](https://www.npmjs.com/package/dotenv)                                    | Dotenv is a zero-dependency module that loads environment        |
+| [Chai](https://www.chaijs.com/)                                                   | assertion library for node                                       |
+| [Faker](https://www.npmjs.com/package/faker)                                      | generate massive amounts of fake data                            |
+| [Prettyjson](http://rafeca.com/prettyjson/)                                       | Package for formatting JSON data in a coloured YAML-style        |
+| [uuid](https://github.com/kelektiv/node-uuid#readme)                              | Simple, fast generation of RFC4122 UUIDS.                        |
+| [npm-run-all](https://github.com/mysticatea/npm-run-all)                          | A CLI tool to run multiple npm-scripts in parallel or sequential.|
+| [lodash](https://lodash.com/)                                                     | odash makes JavaScript easier working with arrays,               |
+| [chai-http](https://github.com/chaijs/chai-http#readme)                           | HTTP integration testing with Chai assertions.                   |
+| [rimraf](https://github.com/isaacs/rimraf#readme)                                 | The UNIX command rm -rf for node                                 |
+| [cross-env](https://github.com/kentcdodds/cross-env#readme)                       | Run scripts that use environment variables across platforms      |
 
 ### Results  
 <img src="https://github.com/dipjyotimetia/screenshots/blob/master/api/result.png" width="400">
