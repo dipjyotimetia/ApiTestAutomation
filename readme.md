@@ -9,6 +9,9 @@
 * ``npm test`` to run all test  
 * ``npm run local`` to run specific test
 
+### Run Tests in docker
+* ``./build-docker.sh`` to run all tests in docker container
+
 ## Usage  
 ```javascript
 const expect = require('chai').expect,                   // Import chai for assertions
