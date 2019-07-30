@@ -28,7 +28,6 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
     "mocha": "^6.2.0",
     "mochawesome": "4.0.1",
     "mocha-junit-reporter": "1.23.1",
@@ -43,16 +42,16 @@
     "axios": "0.19.0",
     "json-server": "0.15.0",
     "cross-env": "^5.2.0",
-    "knex": "0.19.0",
-    "lokijs": "1.5.6",
-    "pg": "7.11.0",
+    "knex": "0.19.1",
+    "lokijs": "1.5.7",
+    "pg": "7.12.0",
     "mssql": "5.1.0"
   },
   "devDependencies": {
     "chalk": "2.4.2",
     "start-server-and-test": "^1.9.0",
     "concurrently": "^4.1.0",
-    "lodash": "4.17.11",
+    "lodash": "4.17.15",
     "sinon": "7.3.2",
     "npm-run-all": "^4.1.5",
     "rimraf": "^2.6.3"
