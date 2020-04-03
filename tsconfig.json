@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "strict": false,
+        "allowSyntheticDefaultImports": true,
+        "strictNullChecks": true,
+        "removeComments": false,
+        "baseUrl": "./node_modules",
+        "target": "es2020",
+        "lib": [
+            "es5",
+            "es6",
+            "es7",
+            "es2020"
+        ],
+        "types": [
+            "node","mocha"
+        ],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "allowJs": false,
+        "pretty": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": false,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "forceConsistentCasingInFileNames": true,
+        "importHelpers": true,
+        "noEmitHelpers": true
+    },
+    "include": [
+        "**/*.ts"
+    ]
+}

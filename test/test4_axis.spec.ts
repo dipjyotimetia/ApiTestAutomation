@@ -1,12 +1,10 @@
-const axios = require("axios"),
-  should = require("chai").should(),
-  expect = require("chai").expect,
-  assert = require("chai").assert;
+import axios from "axios"
+// import { expect } from "chai";
 
-describe("Text Axios", async () => {
-  
+describe.skip("Text Axios", async () => {
+
   it("Text typiCode", async () => {
-    let res = await axios.default.post(
+    let res = await axios.post(
       "https://jsonplaceholder.typicode.com/posts"
     );
     console.log(`Status code: ${res.status}`);
@@ -20,9 +18,9 @@ describe("Text Axios", async () => {
 
   it("github api, multiple request", async () => {
     let [u1, u2, u3] = await Promise.all([
-      axios.default.get("https://api.github.com/users/janbodnar"),
-      axios.default.get("https://api.github.com/users/symfony"),
-      axios.default.get("https://api.github.com/users")
+      axios.get("https://api.github.com/users/janbodnar"),
+      axios.get("https://api.github.com/users/symfony"),
+      axios.get("https://api.github.com/users")
     ]);
 
     console.log(`Jan Bodnar: ${u1.data.created_at}`);
@@ -31,7 +29,7 @@ describe("Text Axios", async () => {
   });
 
   it("local jsonserver", async () => {
-    axios.default
+    axios
       .get("http://localhost:3000/users")
       .then(resp => {
         let data = resp.data;
