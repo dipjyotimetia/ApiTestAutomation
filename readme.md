@@ -1,4 +1,7 @@
+![ApiTest CI](https://github.com/dipjyotimetia/ApiTestAutomation/workflows/ApiTest%20CI/badge.svg?branch=master)  
+
 # Api Test Framework
+
 ### Install node  
 [Nodejs > 12.0](https://nodejs.org/en/)
 
