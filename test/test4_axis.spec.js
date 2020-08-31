@@ -1,13 +1,27 @@
+const { agent } = require("supertest");
+
 const axios = require("axios"),
   should = require("chai").should(),
   expect = require("chai").expect,
-  assert = require("chai").assert;
+  assert = require("chai").assert,
+  https = require("https");
 
 describe("Text Axios", async () => {
+
+  const agent = new https.Agent({
+    keepAlive: true,
+    rejectUnauthorized: false
+  })
   
+  const requestTypi = axios.default.create({
+    baseURL: "https://jsonplaceholder.typicode.com",
+    timeout: 1000,
+    httpsAgent : agent
+  })
+
   it("Text typiCode", async () => {
-    let res = await axios.default.post(
-      "https://jsonplaceholder.typicode.com/posts"
+    let res = await requestTypi.post(
+      "/posts"
     );
     console.log(`Status code: ${res.status}`);
     console.log(`Status text: ${res.statusText}`);
