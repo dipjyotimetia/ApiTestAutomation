@@ -8,7 +8,7 @@ const should = require("chai").should(),
 describe("API Locations", async () => {
   axios.defaults.headers = {
     "Content-Type": "application/json",
-    Authorization: "02ebe067-0532-4bd4-937e-1c667214f042"
+    Authorization: ""
   };
 
   it("Test Locations details", async () => {
