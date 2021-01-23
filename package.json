@@ -44,7 +44,7 @@
     "cross-env": "^7.0.2",
     "knex": "0.21.5",
     "lokijs": "1.5.11",
-    "pg": "8.3.3",
+    "pg": "8.5.1",
     "mssql": "6.2.1"
   },
   "devDependencies": {
