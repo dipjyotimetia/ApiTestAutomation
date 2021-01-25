@@ -45,7 +45,7 @@
     "knex": "0.21.16",
     "lokijs": "1.5.11",
     "pg": "8.5.1",
-    "mssql": "6.2.1"
+    "mssql": "6.3.1"
   },
   "devDependencies": {
     "chalk": "4.1.0",
