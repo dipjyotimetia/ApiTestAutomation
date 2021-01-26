@@ -38,7 +38,7 @@
     "express-basic-auth": "1.2.0",
     "cookie-parser": "~1.4.5",
     "uuid": "8.3.2",
-    "faker": "5.1.0",
+    "faker": "5.2.0",
     "axios": "0.21.1",
     "json-server": "0.16.3",
     "cross-env": "^7.0.3",
