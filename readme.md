@@ -3,7 +3,7 @@
 # Api Test Framework
 
 ### Install node  
-[Nodejs > 12.0](https://nodejs.org/en/)
+[Nodejs > 14.0](https://nodejs.org/en/)
 
 ### Install node modules  
 ``npm i``

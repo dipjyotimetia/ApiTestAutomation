@@ -5,7 +5,7 @@ const should = require("chai").should(),
   accountPayLoad = require("../helper/account"),
   axios = require("axios");
 
-describe("API Locations", async () => {
+describe("API Locations", () => {
   axios.defaults.headers = {
     "Content-Type": "application/json",
     Authorization: ""

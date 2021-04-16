@@ -1,30 +1,31 @@
 {
   "name": "apitestautomation",
-  "version": "2.0.0",
-  "description": "Test api using mocha, chai and supertest",
+  "version": "3.0.0",
+  "description": "Test api using jest, chai and supertest",
   "main": "index.js",
   "scripts": {
     "prestart": "npm install;",
-    "start": "JUNIT_REPORT_PATH=test-result/result.xml JUNIT_REPORT_STACK=1 mocha --timeout 25000 --colors --reporter mocha-jenkins-reporter || true",
-    "test": "mocha --timeout 25000 --reporter mochawesome",
+    "test": "jest",
     "start:server": "node server/server.js",
     "start:test": "concurrently \"npm:start:server\" \"npm:test\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TestautoDev/ApiTestAutomation.git"
+    "url": "git+https://github.com/dipjyotimetia/ApiTestAutomation.git"
   },
   "keywords": [
     "api",
     "test",
     "automation"
   ],
-  "author": "Dipjyoti Metia",
+  "author": {
+    "name": "Dipjyoti Metia"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TestautoDev/ApiTestAutomation/issues"
+    "url": "https://github.com/dipjyotimetia/ApiTestAutomation/issues"
   },
-  "homepage": "https://github.com/TestautoDev/ApiTestAutomation#readme",
+  "homepage": "https://github.com/dipjyotimetia/ApiTestAutomation#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "chai": "^4.3.4"
@@ -32,24 +33,23 @@
   "devDependencies": {
     "axios": "^0.21.1",
     "chalk": "^4.1.0",
-    "concurrently": "^6.0.0",
+    "concurrently": "^6.0.2",
     "cookie-parser": "^1.4.5",
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "express-basic-auth": "^1.2.0",
-    "faker": "^5.5.1",
+    "faker": "^5.5.3",
+    "jest": "26.6.3",
+    "jest-html-reporters": "2.1.3",
+    "jest-json-schema": "5.0.0",
+    "jest-openapi": "0.13.0",
     "json-server": "^0.16.3",
     "knex": "^0.95.4",
     "lodash": "^4.17.21",
     "lokijs": "^1.5.11",
-    "mocha": "^8.3.2",
-    "mocha-jenkins-reporter": "^0.4.5",
-    "mocha-junit-reporter": "^2.0.0",
-    "mocha-multi": "^1.1.3",
-    "mochawesome": "^6.2.2",
     "mssql": "^6.3.1",
     "npm-run-all": "^4.1.5",
-    "pg": "^8.5.1",
+    "pg": "^8.6.0",
     "rimraf": "^3.0.2",
     "sinon": "^10.0.0",
     "start-server-and-test": "^1.12.1",

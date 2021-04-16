@@ -1,4 +1,4 @@
-FROM node:12.6-slim
+FROM node:14.16.0-alpine
 
 # app workdir
 WORKDIR /app
@@ -7,7 +7,6 @@ WORKDIR /app
 COPY package.json ./
 
 # install dependecies
-RUN npm install -g mocha mocha-jenkins-reporter
 RUN npm --allow-root install
 
 # build app source code

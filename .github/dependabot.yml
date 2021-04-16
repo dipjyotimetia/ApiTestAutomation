@@ -8,7 +8,7 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "monthly"
       time: "19:00"
       timezone: Australia/Melbourne
     rebase-strategy: "auto"

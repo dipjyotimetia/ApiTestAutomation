@@ -6,17 +6,17 @@ const axios = require("axios"),
   assert = require("chai").assert,
   https = require("https");
 
-describe("Text Axios", async () => {
+describe("Text Axios", () => {
 
   const agent = new https.Agent({
     keepAlive: true,
     rejectUnauthorized: false
   })
-  
+
   const requestTypi = axios.default.create({
     baseURL: "https://jsonplaceholder.typicode.com",
     timeout: 1000,
-    httpsAgent : agent
+    httpsAgent: agent
   })
 
   it("Text typiCode", async () => {
