@@ -44,7 +44,7 @@ describe("Text Axios", () => {
     console.log(`test:${u3.statusText}`);
   });
 
-  it("local jsonserver", async () => {
+  it.skip("local jsonserver", async () => {
     axios.default
       .get("http://localhost:3000/users")
       .then(resp => {
