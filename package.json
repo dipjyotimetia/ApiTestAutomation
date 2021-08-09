@@ -45,7 +45,7 @@
     "jest-json-schema": "5.0.0",
     "jest-openapi": "0.13.0",
     "json-server": "^0.16.3",
-    "knex": "^0.95.4",
+    "knex": "^0.95.9",
     "lodash": "^4.17.21",
     "lokijs": "^1.5.12",
     "mssql": "^7.2.0",
