@@ -33,7 +33,7 @@
   "devDependencies": {
     "axios": "^0.22.0",
     "chalk": "^4.1.1",
-    "concurrently": "^6.2.0",
+    "concurrently": "^6.2.2",
     "cookie-parser": "^1.4.5",
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
