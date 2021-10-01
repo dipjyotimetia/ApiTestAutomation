@@ -54,7 +54,7 @@
     "rimraf": "^3.0.2",
     "sinon": "^11.1.2",
     "start-server-and-test": "^1.13.1",
-    "supertest": "^6.1.4",
+    "supertest": "^6.1.6",
     "uuid": "^8.3.2"
   }
 }
