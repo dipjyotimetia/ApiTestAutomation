@@ -34,7 +34,7 @@
     "axios": "^0.24.0",
     "chalk": "^4.1.2",
     "concurrently": "^6.4.0",
-    "cookie-parser": "^1.4.5",
+    "cookie-parser": "^1.4.6",
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "express-basic-auth": "^1.2.0",
