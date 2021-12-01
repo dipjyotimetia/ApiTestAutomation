@@ -42,7 +42,7 @@
     "jest": "27.3.1",
     "jest-config": "27.3.1",
     "jest-html-reporters": "2.1.6",
-    "jest-json-schema": "5.0.0",
+    "jest-json-schema": "6.0.0",
     "jest-openapi": "0.14.1",
     "json-server": "^0.17.0",
     "knex": "^0.95.12",
