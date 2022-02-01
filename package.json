@@ -40,7 +40,7 @@
     "express-basic-auth": "^1.2.0",
     "faker": "^5.5.3",
     "jest": "27.4.7",
-    "jest-config": "27.4.3",
+    "jest-config": "27.4.7",
     "jest-html-reporters": "3.0.5",
     "jest-json-schema": "6.0.0",
     "jest-openapi": "0.14.1",
