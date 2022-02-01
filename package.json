@@ -36,7 +36,7 @@
     "concurrently": "^7.0.0",
     "cookie-parser": "^1.4.6",
     "cross-env": "^7.0.3",
-    "express": "^4.17.1",
+    "express": "^4.17.2",
     "express-basic-auth": "^1.2.1",
     "faker": "^5.5.3",
     "jest": "27.4.7",
