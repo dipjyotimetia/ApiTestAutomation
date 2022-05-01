@@ -39,7 +39,7 @@
     "express": "^4.18.1",
     "express-basic-auth": "^1.2.1",
     "faker": "^6.6.6",
-    "jest": "27.5.1",
+    "jest": "28.0.3",
     "jest-config": "27.5.1",
     "jest-html-reporters": "3.0.6",
     "jest-json-schema": "6.1.0",
