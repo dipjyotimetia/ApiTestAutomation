@@ -31,7 +31,7 @@
     "chai": "^4.3.7"
   },
   "devDependencies": {
-    "axios": "^1.2.0",
+    "axios": "^1.2.2",
     "chalk": "^5.2.0",
     "concurrently": "^7.6.0",
     "cookie-parser": "^1.4.6",
