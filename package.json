@@ -50,7 +50,7 @@
     "lokijs": "^1.5.12",
     "mssql": "^9.2.0",
     "npm-run-all": "^4.1.5",
-    "pg": "^8.11.1",
+    "pg": "^8.11.3",
     "rimraf": "^5.0.1",
     "sinon": "^15.2.0",
     "start-server-and-test": "^2.0.0",
