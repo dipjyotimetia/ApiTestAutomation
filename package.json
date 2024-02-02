@@ -28,7 +28,7 @@
   "homepage": "https://github.com/dipjyotimetia/ApiTestAutomation#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "chai": "^5.0.0"
+    "chai": "^5.0.3"
   },
   "devDependencies": {
     "axios": "^1.6.7",
