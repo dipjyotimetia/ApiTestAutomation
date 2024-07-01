@@ -55,6 +55,6 @@
     "sinon": "^18.0.0",
     "start-server-and-test": "^2.0.3",
     "supertest": "^7.0.0",
-    "uuid": "^9.0.1"
+    "uuid": "^10.0.0"
   }
 }
