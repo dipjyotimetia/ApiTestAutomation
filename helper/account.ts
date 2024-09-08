@@ -1,4 +1,13 @@
-const account = {
+interface Account {
+  request: {
+    baseCurrency: string;
+    accounts: {
+      accountToken: string;
+    }[];
+  };
+}
+
+const account: Account = {
   request: {
     baseCurrency: "AUD",
     accounts: [
@@ -10,4 +19,4 @@ const account = {
   }
 };
 
-module.exports = account;
+export default account;

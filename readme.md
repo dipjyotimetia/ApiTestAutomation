@@ -15,6 +15,21 @@
 ### Run Tests in docker
 * ``./build-docker.sh`` to run all tests in docker container
 
+### Install TypeScript
+```
+npm install -g typescript
+```
+
+### Run TypeScript files
+* Compile TypeScript files to JavaScript
+```
+tsc
+```
+* Run TypeScript files directly
+```
+ts-node <file>.ts
+```
+
 ## Usage  
 ```javascript
 const expect = require('chai').expect,                   // Import chai for assertions

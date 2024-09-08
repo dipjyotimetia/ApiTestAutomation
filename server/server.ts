@@ -1,11 +1,12 @@
-const express = require('express'),
-    basicAuth = require('express-basic-auth'),
-    bodyParser = require('body-parser'),
-    port = process.env.PORT || 3000,
-    chalk = require('chalk'),
-    app = express();
+import express from 'express';
+import basicAuth from 'express-basic-auth';
+import bodyParser from 'body-parser';
+import chalk from 'chalk';
 
-app.use(express.static(__dirname + '/public'))
+const port = process.env.PORT || 3000;
+const app = express();
+
+app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -13,10 +14,25 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
-let locationList = [];
+interface User {
+    name: string;
+    email: string;
+    phoneNumber: string;
+    role: string;
+}
+
+interface Location {
+    addressStreet: string;
+    addressCity: string;
+    addressState: string;
+    addressZip: string;
+    userId: number;
+}
+
+let locationList: Location[] = [];
 
 app.get('/users/1', (req, res) => {
-    let user = {
+    let user: User = {
         name: "user",
         email: "user@example.com",
         phoneNumber: "5556667777",
@@ -26,7 +42,7 @@ app.get('/users/1', (req, res) => {
 });
 
 app.put('/users/1', (req, res) => {
-    let user = {
+    let user: User = {
         name: req.body.name,
         email: req.body.email,
         phoneNumber: req.body.phoneNumber,
@@ -36,7 +52,7 @@ app.put('/users/1', (req, res) => {
 });
 
 app.post('/locations', (req, res) => {
-    let location = {
+    let location: Location = {
         addressStreet: req.body.addressStreet,
         addressCity: req.body.addressCity,
         addressState: req.body.addressState,
@@ -68,9 +84,10 @@ app.all('/*', (req, res, next) => {
     }
 });
 
-app.get('/blog', basicAuth('correct', 'credentials'), (req, res) => {
+app.get('/blog', basicAuth({ users: { 'correct': 'credentials' } }), (req, res) => {
     res.send({ posts: ['one post', 'two post'] });
 });
 
-app.listen(port);
-console.log(chalk.yellow("Server loaded. Api endpoint on port"), port)
+app.listen(port, () => {
+    console.log(chalk.yellow("Server loaded. Api endpoint on port"), port);
+});
