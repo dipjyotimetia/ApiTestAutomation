@@ -1,9 +1,9 @@
-![ApiTest CI](https://github.com/dipjyotimetia/ApiTestAutomation/workflows/ApiTest%20CI/badge.svg?branch=master)  
+[![ApiTest CI](https://github.com/dipjyotimetia/ApiTestAutomation/actions/workflows/apitest.yml/badge.svg)](https://github.com/dipjyotimetia/ApiTestAutomation/actions/workflows/apitest.yml)  
 
 # Api Test Framework
 
 ### Install node  
-[Nodejs > 14.0](https://nodejs.org/en/)
+[Nodejs >= 20.0](https://nodejs.org/en/)
 
 ### Install node modules  
 ``npm i``
@@ -74,18 +74,11 @@ describe(`Test Description`,()=>{
 
 | **Dependency**                                                                    | **Use**                                                          |
 | --------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| [SuperTest](https://github.com/visionmedia/supertest/blob/master/README.md)       | HTTP assertions made easy via superagent to test GET/POST/Delete |
 | [Axios](https://github.com/axios/axios/blob/master/README.md)                     | Promise based HTTP client for the browser and node.js            |
-| [Mocha](https://mochajs.org/)                                                     | Mocha is a feature-rich JavaScript test framework                |
-| [Mochawesome](https://github.com/adamgruber/mochawesome/blob/master/README.md)    | Mochawesome is a custom reporter for use with the JS mocha       |
-| [Winston](https://github.com/winstonjs/winston/blob/master/README.md)             | simple and universal logging library                             |
-| [DotEnv](https://www.npmjs.com/package/dotenv)                                    | Dotenv is a zero-dependency module that loads environment        |
-| [Chai](https://www.chaijs.com/)                                                   | assertion library for node                                       |
 | [Faker](https://www.npmjs.com/package/faker)                                      | generate massive amounts of fake data                            |
 | [uuid](https://github.com/kelektiv/node-uuid#readme)                              | Simple, fast generation of RFC4122 UUIDS.                        |
 | [npm-run-all](https://github.com/mysticatea/npm-run-all)                          | A CLI tool to run multiple npm-scripts in parallel or sequential.|
 | [lodash](https://lodash.com/)                                                     | odash makes JavaScript easier working with arrays,               |
-| [chai-http](https://github.com/chaijs/chai-http#readme)                           | HTTP integration testing with Chai assertions.                   |
 | [rimraf](https://github.com/isaacs/rimraf#readme)                                 | The UNIX command rm -rf for node                                 |
 | [cross-env](https://github.com/kentcdodds/cross-env#readme)                       | Run scripts that use environment variables across platforms      |
 
