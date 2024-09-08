@@ -1,34 +1,40 @@
 [![ApiTest CI](https://github.com/dipjyotimetia/ApiTestAutomation/actions/workflows/apitest.yml/badge.svg)](https://github.com/dipjyotimetia/ApiTestAutomation/actions/workflows/apitest.yml)  
 
-# Api Test Framework
+# API Test Framework
 
-### Install node  
-[Nodejs >= 20.0](https://nodejs.org/en/)
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+  - [Install Node.js and pnpm](#install-nodejs-and-pnpm)
+  - [Install Node Modules](#install-node-modules)
+  - [Install TypeScript](#install-typescript)
+- [Running Tests](#running-tests)
+- [Generating HTML Reports](#generating-html-reports)
+- [Making HTTP Requests](#making-http-requests)
+- [Generating Fake Data](#generating-fake-data)
+- [Additional Jest Matchers](#additional-jest-matchers)
+- [Usage](#usage)
+- [Example](#example)
 
-### Install node modules  
-``npm i``
+## Prerequisites
+- [Node.js >= 20.0](https://nodejs.org/en/)
+- [pnpm >= 9](https://pnpm.io/)
+
+## Installation
+
+### Install Node.js and pnpm
+Ensure you have Node.js and pnpm installed. You can download them from the following links:
+- [Node.js](https://nodejs.org/en/)
+- [pnpm](https://pnpm.io/)
+
+### Install Node Modules
+To install the required node modules, run:
+```sh
+pnpm install
+```
 
 ### Run Tests  
 * ``npm test`` to run all test  
-* ``npm run local`` to run specific test
-
-### Run Tests in docker
-* ``./build-docker.sh`` to run all tests in docker container
-
-### Install TypeScript
-```
-npm install -g typescript
-```
-
-### Run TypeScript files
-* Compile TypeScript files to JavaScript
-```
-tsc
-```
-* Run TypeScript files directly
-```
-ts-node <file>.ts
-```
 
 ### Generate HTML Reports using jest-html-reporters
 To generate HTML reports for your tests, you can use `jest-html-reporters`. The configuration is already set up in `jest.config.ts`.
@@ -59,53 +65,6 @@ describe('API Testing Framework', () => {
 
     expect(response.status).toEqual(200);
     expect(response.data).toBeInstanceOf(Array);
-  });
-
-  test('should get a single post', async () => {
-    const endpoint = getEndpoint('getPost');
-    const response = await HttpGet(`${baseUrl}${endpoint?.path.replace('{id}', '1')}`);
-
-    expect(response.status).toEqual(200);
-    expect(response.data).toHaveProperty('id', 1);
-  });
-
-  test('should create a new post', async () => {
-    const endpoint = getEndpoint('createPost');
-
-    // Define the request body dynamically
-    const requestBody = {
-      title: "foo",
-      body: "bar",
-      userId: 1
-    };
-
-    const response = await HttpPost(`${baseUrl}${endpoint?.path}`, requestBody);
-
-    expect(response.status).toEqual(201);
-    expect(response.data).toHaveProperty('id');
-    expect(response.data.title).toEqual(requestBody.title);
-  });
-
-  test('should update a post', async () => {
-    const endpoint = getEndpoint('getPost'); // Using the same path as getPost for simplicity
-    const postId = 1;
-    const requestBody = {
-      title: "updated title"
-    };
-
-    const response = await HttpPatch(`${baseUrl}${endpoint?.path.replace('{id}', postId.toString())}`, requestBody);
-
-    expect(response.status).toEqual(200);
-    expect(response.data).toHaveProperty('title', requestBody.title);
-  });
-
-  test('should delete a post', async () => {
-    const endpoint = getEndpoint('getPost'); // Using the same path as getPost for simplicity
-    const postId = 1;
-
-    const response = await HttpDelete(`${baseUrl}${endpoint?.path.replace('{id}', postId.toString())}`);
-
-    expect(response.status).toEqual(200);
   });
 });
 ```
