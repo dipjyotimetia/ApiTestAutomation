@@ -30,45 +30,84 @@ tsc
 ts-node <file>.ts
 ```
 
+### Generate HTML Reports using jest-html-reporters
+To generate HTML reports for your tests, you can use `jest-html-reporters`. The configuration is already set up in `jest.config.ts`.
+
+### Making HTTP Requests using axios
+This project uses `axios` for making HTTP requests. You can find the helper functions for making GET, POST, PATCH, and DELETE requests in `src/helper/apiHelper.ts`.
+
+### Generating Fake Data using faker
+This project uses `faker` for generating fake data. You can find an example of how to use `faker` in `src/helper/create.ts`.
+
+### Additional Jest Matchers using jest-extended
+This project uses `jest-extended` for additional Jest matchers. The configuration is already set up in `jest.config.ts`.
+
 ## Usage  
 ```javascript
-const expect = require('chai').expect,                   // Import chai for assertions
-    faker = require('faker'),                           // Faker library to generate fake data
-    supertest = require('supertest'),                  // Api test library
-    logger = require('../config/logger')(__filename), // Logging info/errors
+const { HttpGet, HttpPost, HttpPatch, HttpDelete } = require('../helper/apiHelper');
+const { baseUrl, getEndpoint } = require('../config/config');
 ```
 ## Example Get Start
 ```javascript
-const expect = require('chai').expect,
-    faker = require('faker'),
-    supertest = require('supertest'),
-    account = require('../api/Account'),
-    config = require('../config/config'),
-    logger = require('../config/logger')(__filename),
-    api = supertest(`${config.BASE_URL}`);
+const { HttpGet, HttpPost, HttpPatch, HttpDelete } = require('../helper/apiHelper');
+const { baseUrl, getEndpoint } = require('../config/config');
 
-describe(`Test Description`,()=>{
+describe('API Testing Framework', () => {
+  test('should get all posts', async () => {
+    const endpoint = getEndpoint('getPosts');
+    const response = await HttpGet(`${baseUrl}${endpoint?.path}`);
 
-    let clientAuth;
-    let authToken;
+    expect(response.status).toEqual(200);
+    expect(response.data).toBeInstanceOf(Array);
+  });
 
-    beforeEach(`GetAuthToken`, async ()=>{
-         
-    });
+  test('should get a single post', async () => {
+    const endpoint = getEndpoint('getPost');
+    const response = await HttpGet(`${baseUrl}${endpoint?.path.replace('{id}', '1')}`);
 
-    it(`Test Name`, async ()=>{
-        try {
-          const res = await api.get('END_POINT')
-                .set('Accept', 'application/x-www-form-urlencoded')
-                .expect(200);
-           expect(res.body).to.have.property('PROPERTY_NAME');     
-        } catch (error) {
-            logger.error(`Error reason`${error});
-            throw Error(error);
-        }
-    });
-})
+    expect(response.status).toEqual(200);
+    expect(response.data).toHaveProperty('id', 1);
+  });
 
+  test('should create a new post', async () => {
+    const endpoint = getEndpoint('createPost');
+
+    // Define the request body dynamically
+    const requestBody = {
+      title: "foo",
+      body: "bar",
+      userId: 1
+    };
+
+    const response = await HttpPost(`${baseUrl}${endpoint?.path}`, requestBody);
+
+    expect(response.status).toEqual(201);
+    expect(response.data).toHaveProperty('id');
+    expect(response.data.title).toEqual(requestBody.title);
+  });
+
+  test('should update a post', async () => {
+    const endpoint = getEndpoint('getPost'); // Using the same path as getPost for simplicity
+    const postId = 1;
+    const requestBody = {
+      title: "updated title"
+    };
+
+    const response = await HttpPatch(`${baseUrl}${endpoint?.path.replace('{id}', postId.toString())}`, requestBody);
+
+    expect(response.status).toEqual(200);
+    expect(response.data).toHaveProperty('title', requestBody.title);
+  });
+
+  test('should delete a post', async () => {
+    const endpoint = getEndpoint('getPost'); // Using the same path as getPost for simplicity
+    const postId = 1;
+
+    const response = await HttpDelete(`${baseUrl}${endpoint?.path.replace('{id}', postId.toString())}`);
+
+    expect(response.status).toEqual(200);
+  });
+});
 ```
 ### Built With  
 
