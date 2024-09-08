@@ -1,4 +1,4 @@
-import faker from 'faker';
+import {faker} from '@faker-js/faker';
 
 interface PayLoad {
     name: string;
@@ -7,8 +7,8 @@ interface PayLoad {
 }
 
 const payLoad: PayLoad = {
-    name: faker.name.firstName(),
-    address: faker.address.streetAddress(),
+    name: faker.person.firstName(),
+    address: faker.location.streetAddress(),
     pass: 'password'
 };
 
