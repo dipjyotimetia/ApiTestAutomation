@@ -15,6 +15,21 @@
 ### Run Tests in docker
 * ``./build-docker.sh`` to run all tests in docker container
 
+### Install TypeScript
+```
+npm install -g typescript
+```
+
+### Run TypeScript files
+* Compile TypeScript files to JavaScript
+```
+tsc
+```
+* Run TypeScript files directly
+```
+ts-node <file>.ts
+```
+
 ## Usage  
 ```javascript
 const expect = require('chai').expect,                   // Import chai for assertions
@@ -60,17 +75,13 @@ describe(`Test Description`,()=>{
 | **Dependency**                                                                    | **Use**                                                          |
 | --------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | [SuperTest](https://github.com/visionmedia/supertest/blob/master/README.md)       | HTTP assertions made easy via superagent to test GET/POST/Delete |
-| [Sinon](https://sinonjs.org/)                                                     | Standalone test spies, stubs and mocks for JavaScript            |
 | [Axios](https://github.com/axios/axios/blob/master/README.md)                     | Promise based HTTP client for the browser and node.js            |
 | [Mocha](https://mochajs.org/)                                                     | Mocha is a feature-rich JavaScript test framework                |
-| [Lokijs](http://lokijs.org/)                                                      | In-memory JavaScript Datastore with Persistence                  |
 | [Mochawesome](https://github.com/adamgruber/mochawesome/blob/master/README.md)    | Mochawesome is a custom reporter for use with the JS mocha       |
 | [Winston](https://github.com/winstonjs/winston/blob/master/README.md)             | simple and universal logging library                             |
-| [Knex](https://knexjs.org/)                                                       | SQL query builder for Postgres, MSSQL, MySQL                     |
 | [DotEnv](https://www.npmjs.com/package/dotenv)                                    | Dotenv is a zero-dependency module that loads environment        |
 | [Chai](https://www.chaijs.com/)                                                   | assertion library for node                                       |
 | [Faker](https://www.npmjs.com/package/faker)                                      | generate massive amounts of fake data                            |
-| [Prettyjson](http://rafeca.com/prettyjson/)                                       | Package for formatting JSON data in a coloured YAML-style        |
 | [uuid](https://github.com/kelektiv/node-uuid#readme)                              | Simple, fast generation of RFC4122 UUIDS.                        |
 | [npm-run-all](https://github.com/mysticatea/npm-run-all)                          | A CLI tool to run multiple npm-scripts in parallel or sequential.|
 | [lodash](https://lodash.com/)                                                     | odash makes JavaScript easier working with arrays,               |
