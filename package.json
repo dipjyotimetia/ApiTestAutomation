@@ -30,7 +30,7 @@
     "@faker-js/faker": "^9.0.1",
     "@jest/globals": "^29.7.0",
     "@types/chai": "^4.3.19",
-    "@types/jest": "^29.5.12",
+    "@types/jest": "^29.5.13",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.5.4",
     "axios": "^1.7.7",
