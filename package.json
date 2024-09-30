@@ -27,7 +27,7 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-typescript": "^7.24.7",
-    "@faker-js/faker": "^9.0.1",
+    "@faker-js/faker": "^9.0.3",
     "@jest/globals": "^29.7.0",
     "@types/chai": "^4.3.19",
     "@types/jest": "^29.5.13",
