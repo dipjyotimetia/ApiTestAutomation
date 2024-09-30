@@ -24,8 +24,8 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0
       '@types/chai':
-        specifier: ^4.3.19
-        version: 4.3.19
+        specifier: ^5.0.0
+        version: 5.0.0
       '@types/jest':
         specifier: ^29.5.13
         version: 29.5.13
@@ -834,8 +834,8 @@ packages:
   '@types/caseless@0.12.5':
     resolution: {integrity: sha512-hWtVTC2q7hc7xZ/RLbxapMvDMgUnDvKvMOpKal4DrMyfGBUfB1oKaZlIRr6mJL+If3bAP6sV/QneGzF6tJjZDg==}
 
-  '@types/chai@4.3.19':
-    resolution: {integrity: sha512-2hHHvQBVE2FiSK4eN0Br6snX9MtolHaTo/batnLjlGRhoQzlCL61iVpxoqO7SfFyOw+P/pwv+0zNHzKoGWz9Cw==}
+  '@types/chai@5.0.0':
+    resolution: {integrity: sha512-+DwhEHAaFPPdJ2ral3kNHFQXnTfscEEFsUxzD+d7nlcLrFK23JtNjH71RGasTcHb88b4vVi4mTyfpf8u2L8bdA==}
 
   '@types/cookiejar@2.1.5':
     resolution: {integrity: sha512-he+DHOWReW0nghN24E1WUqM0efK4kI9oTqDm6XmK8ZPe2djZ90BSNdGnIyCLzCPw7/pogPlGbzI2wHGGmi4O/Q==}
@@ -3098,7 +3098,7 @@ snapshots:
 
   '@types/caseless@0.12.5': {}
 
-  '@types/chai@4.3.19': {}
+  '@types/chai@5.0.0': {}
 
   '@types/cookiejar@2.1.5': {}
 
