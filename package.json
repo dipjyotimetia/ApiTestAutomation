@@ -39,7 +39,7 @@
     "concurrently": "^9.1.2",
     "cross-env": "^7.0.3",
     "jest": "^29.7.0",
-    "jest-extended": "^5.0.3",
+    "jest-extended": "^6.0.0",
     "jest-html-reporters": "^3.1.7",
     "jest-json-schema": "^6.1.0",
     "jest-openapi": "^0.14.2",
