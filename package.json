@@ -32,7 +32,7 @@
     "@types/chai": "^5.2.2",
     "@types/jest": "^29.5.14",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.15.17",
+    "@types/node": "^24.0.7",
     "axios": "^1.8.4",
     "babel-jest": "^29.7.0",
     "chalk": "^5.4.1",
