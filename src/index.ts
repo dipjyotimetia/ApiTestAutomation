@@ -1,2 +1,2 @@
-export { BaseTest, TestOptions } from './helpers/BaseTest.js';
-export { AssertionHelpers } from './utils/AssertionHelpers.js';
+export { BaseTest, TestOptions } from './helpers/BaseTest';
+export { AssertionHelpers } from './utils/AssertionHelpers';

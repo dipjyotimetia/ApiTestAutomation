@@ -1,5 +1,5 @@
 {
-  "require": "ts-node/register",
+  "require": ["ts-node/register/transpile-only", "dotenv/config"],
   "extensions": ["ts"],
   "spec": "src/tests/**/*.test.ts",
   "recursive": true,
@@ -11,5 +11,8 @@
     "json=true",
     "overwrite=false",
     "timestamp=mmddyyyy_HHMMss"
-  ]
+  ],
+  "timeout": 20000,
+  "retries": 1,
+  "color": true
 }

@@ -20,8 +20,12 @@ export class AssertionHelpers {
   }
 
   static expectResponseTime(response: Response, maxTime: number) {
-    const responseTime = response.get('X-Response-Time') || '0ms';
-    const time = parseInt(responseTime.replace('ms', ''));
+    // Prefer client-side measurement if present
+    const clientTime = response.header['x-client-response-time'];
+    const serverTime = response.get('X-Response-Time');
+    const timeStr = (clientTime || serverTime || '0ms').toString();
+    const time = parseInt(timeStr.replace('ms', ''), 10) || 0;
+
     expect(time).to.be.lessThanOrEqual(maxTime, 
       `Response time ${time}ms exceeded maximum ${maxTime}ms`);
   }
@@ -40,7 +44,7 @@ export class AssertionHelpers {
   static expectBodyContains(response: Response, substring: string) {
     const bodyString = typeof response.body === 'object' 
       ? JSON.stringify(response.body) 
-      : response.body.toString();
+      : response.body?.toString?.() ?? '';
     expect(bodyString).to.include(substring);
   }
 
