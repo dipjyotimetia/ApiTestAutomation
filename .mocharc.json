@@ -1,0 +1,15 @@
+{
+  "require": "ts-node/register",
+  "extensions": ["ts"],
+  "spec": "src/tests/**/*.test.ts",
+  "recursive": true,
+  "reporter": "mochawesome",
+  "reporter-options": [
+    "reportDir=reports",
+    "reportFilename=test-report",
+    "html=true",
+    "json=true",
+    "overwrite=false",
+    "timestamp=mmddyyyy_HHMMss"
+  ]
+}
