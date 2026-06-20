@@ -10,9 +10,21 @@
     "html=true",
     "json=true",
     "overwrite=false",
-    "timestamp=mmddyyyy_HHMMss"
+    "timestamp=mmddyyyy_HHMMss",
+    "charts=true",
+    "reportPageTitle=API Test Results",
+    "embeddedScreenshots=true",
+    "inlineAssets=true"
   ],
   "timeout": 20000,
   "retries": 1,
-  "color": true
+  "color": true,
+  "bail": false,
+  "parallel": false,
+  "jobs": 1,
+  "grep": "",
+  "exit": true,
+  "checkLeaks": true,
+  "forbidOnly": true,
+  "forbidPending": false
 }

@@ -1,4 +1,5 @@
 import supertest, { Response } from 'supertest';
+import logger from '../utils/Logger';
 
 export interface TestOptions {
   baseURL: string;
@@ -118,8 +119,19 @@ export class BaseTest {
     };
 
     const res = await this.sendWithRetry(build);
+    const responseTime = Date.now() - start;
+    
+    // Log request and response details
+    logger.info({
+      method: method.toUpperCase(),
+      endpoint,
+      statusCode: res.status,
+      responseTime: `${responseTime}ms`,
+      ...(body && { requestBody: typeof body === 'object' ? body : 'raw data' })
+    }, 'HTTP Request completed');
+    
     // Stamp client-side timing for assertions
-    (res as Response).header = { ...(res as Response).header, 'x-client-response-time': `${Date.now() - start}ms` };
+    (res as Response).header = { ...(res as Response).header, 'x-client-response-time': `${responseTime}ms` };
     return res;
   }
 
@@ -133,6 +145,11 @@ export class BaseTest {
         if (!this.retry.statusCodes.includes(res.status) || attempt === this.retry.attempts - 1) {
           return res;
         }
+        logger.warn({
+          attempt: attempt + 1,
+          statusCode: res.status,
+          retryAfterMs: this.backoffMs(attempt)
+        }, 'Retrying request due to retriable status code');
         await this.delay(this.backoffMs(attempt));
       } catch (err: any) {
         lastError = err;
@@ -140,6 +157,12 @@ export class BaseTest {
         if (!retriableCodes.includes(err?.code) || attempt === this.retry.attempts - 1) {
           throw err;
         }
+        logger.warn({
+          attempt: attempt + 1,
+          error: err.message,
+          errorCode: err.code,
+          retryAfterMs: this.backoffMs(attempt)
+        }, 'Retrying request due to network error');
         await this.delay(this.backoffMs(attempt));
       }
       attempt++;

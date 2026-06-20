@@ -1,0 +1,86 @@
+name: API Tests (Simple)
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+  schedule:
+    - cron: '0 2 * * *' # Daily at 2 AM UTC
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Create reports directory
+        run: mkdir -p reports
+      
+      - name: Run API tests
+        run: npm test
+        env:
+          CI: true
+          # Add your API base URLs and keys here
+          # API_BASE_URL: ${{ secrets.API_BASE_URL }}
+          # API_KEY: ${{ secrets.API_KEY }}
+        continue-on-error: true # Continue to upload reports even if tests fail
+      
+      - name: Upload HTML test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: html-test-report
+          path: reports/*.html
+          retention-days: 30
+      
+      - name: Upload JSON test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: json-test-report
+          path: reports/*.json
+          retention-days: 30
+      
+      - name: Display test summary
+        if: always()
+        run: |
+          echo "## Test Results Summary" >> $GITHUB_STEP_SUMMARY
+          if [ -f reports/*.json ]; then
+            # Extract test stats from JSON report
+            REPORT_FILE=$(ls reports/*.json | head -1)
+            TOTAL=$(jq -r '.stats.tests' "$REPORT_FILE" 2>/dev/null || echo "0")
+            PASSED=$(jq -r '.stats.passes' "$REPORT_FILE" 2>/dev/null || echo "0")
+            FAILED=$(jq -r '.stats.failures' "$REPORT_FILE" 2>/dev/null || echo "0")
+            PENDING=$(jq -r '.stats.pending' "$REPORT_FILE" 2>/dev/null || echo "0")
+            DURATION=$(jq -r '.stats.duration' "$REPORT_FILE" 2>/dev/null || echo "0")
+            
+            echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+            echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+            echo "| Total Tests | $TOTAL |" >> $GITHUB_STEP_SUMMARY
+            echo "| Passed | $PASSED ✅ |" >> $GITHUB_STEP_SUMMARY
+            echo "| Failed | $FAILED ❌ |" >> $GITHUB_STEP_SUMMARY
+            echo "| Pending | $PENDING ⏳ |" >> $GITHUB_STEP_SUMMARY
+            echo "| Duration | ${DURATION}ms |" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "📊 [Download detailed reports from artifacts](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "No test reports found" >> $GITHUB_STEP_SUMMARY
+          fi
